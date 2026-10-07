@@ -1,0 +1,181 @@
+* {
+  box-sizing: border-box;
+}
+
+:root {
+  --aqua: #dff7fb;
+  --blue: #68c7e7;
+  --purple: #7650a8;
+  --pink: #ef6fa8;
+  --card-shadow: 0 18px 60px rgba(40, 103, 130, 0.20);
+}
+
+html {
+  min-height: 100%;
+  background:
+    radial-gradient(circle at 15% 8%, rgba(255,255,255,.95), transparent 28rem),
+    linear-gradient(180deg, #dff7fb 0%, #f7fbff 48%, #faefe4 100%);
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  color: #442f74;
+}
+
+.page-shell {
+  width: min(100%, 1024px);
+  margin: 0 auto;
+  padding: 18px 12px calc(28px + env(safe-area-inset-bottom));
+}
+
+.invite-card {
+  position: relative;
+  width: min(100%, 620px);
+  margin: 0 auto;
+  overflow: hidden;
+  border-radius: 28px;
+  box-shadow: var(--card-shadow);
+  background: white;
+  isolation: isolate;
+}
+
+.invite-image {
+  display: block;
+  width: 100%;
+  height: auto;
+  user-select: none;
+  -webkit-user-select: none;
+}
+
+.hotspot {
+  position: absolute;
+  z-index: 4;
+  display: block;
+  border-radius: 18px;
+  outline: none;
+}
+
+.hotspot:focus-visible {
+  outline: 4px solid rgba(239, 111, 168, .95);
+  outline-offset: 2px;
+  background: rgba(255, 255, 255, .10);
+}
+
+/* Coordenadas em percentual para acompanhar o redimensionamento da arte */
+.location-hotspot {
+  left: 22%;
+  top: 77.0%;
+  width: 56%;
+  height: 9.2%;
+}
+
+.rsvp-hotspot {
+  left: 28%;
+  top: 88.4%;
+  width: 50%;
+  height: 8.0%;
+}
+
+.bubbles {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  overflow: hidden;
+  z-index: 3;
+}
+
+.bubbles span {
+  position: absolute;
+  left: var(--x);
+  bottom: -24px;
+  width: var(--s);
+  height: var(--s);
+  border-radius: 999px;
+  border: 1px solid rgba(255,255,255,.65);
+  background: radial-gradient(circle at 30% 25%,
+    rgba(255,255,255,.95) 0 8%,
+    rgba(255,255,255,.42) 9% 28%,
+    rgba(85,194,232,.18) 60%,
+    rgba(255,255,255,.08) 100%);
+  box-shadow: inset 0 0 7px rgba(255,255,255,.85);
+  opacity: .55;
+  animation: rise var(--d) linear infinite;
+  animation-delay: var(--delay);
+}
+
+@keyframes rise {
+  0% {
+    transform: translate3d(0, 0, 0) scale(.85);
+    opacity: 0;
+  }
+  12% { opacity: .55; }
+  70% { opacity: .45; }
+  100% {
+    transform: translate3d(12px, -1150px, 0) scale(1.08);
+    opacity: 0;
+  }
+}
+
+.quick-actions {
+  width: min(100%, 620px);
+  margin: 14px auto 0;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+}
+
+.action-button {
+  min-height: 52px;
+  padding: 13px 15px;
+  border-radius: 999px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 9px;
+  text-align: center;
+  text-decoration: none;
+  font-weight: 750;
+  color: #fff;
+  background: linear-gradient(135deg, var(--pink), var(--purple));
+  box-shadow: 0 8px 20px rgba(90, 67, 145, .18);
+  transition: transform .16s ease, box-shadow .16s ease;
+}
+
+.action-button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 12px 24px rgba(90, 67, 145, .24);
+}
+
+.action-button:active {
+  transform: translateY(0);
+}
+
+@media (max-width: 520px) {
+  .page-shell {
+    padding: 0 0 calc(20px + env(safe-area-inset-bottom));
+  }
+
+  .invite-card {
+    width: 100%;
+    border-radius: 0 0 24px 24px;
+    box-shadow: 0 10px 30px rgba(40, 103, 130, .14);
+  }
+
+  .quick-actions {
+    padding: 0 12px;
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .bubbles span {
+    animation: none;
+    display: none;
+  }
+
+  .action-button {
+    transition: none;
+  }
+}
