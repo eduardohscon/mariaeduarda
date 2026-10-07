@@ -22,13 +22,14 @@
         draggable="false"
       />
 
-      <!-- Áreas clicáveis sobre a própria arte -->
+      <!-- Áreas clicáveis diretamente sobre a arte -->
       <a
         class="hotspot location-hotspot"
         href="https://maps.app.goo.gl/ujSrrrBSLkHcSrzF8?g_st=iw"
         target="_blank"
         rel="noopener noreferrer"
-        aria-label="Abrir localização da Casa de Festas Nosso Jardim no Google Maps"
+        aria-label="Abrir Casa de Festas Nosso Jardim no Google Maps"
+        title="Abrir localização no Google Maps"
       ></a>
 
       <a
@@ -37,6 +38,7 @@
         target="_blank"
         rel="noopener noreferrer"
         aria-label="Confirmar presença pelo WhatsApp"
+        title="Confirmar presença pelo WhatsApp"
       ></a>
 
       <!-- Bolhas decorativas animadas -->
@@ -51,7 +53,38 @@
       </div>
     </section>
 
-    <nav class="quick-actions" aria-label="Ações do convite">
+    <section class="details-card" aria-label="Informações adicionais">
+      <p class="gift-title">🎁 Para quem perguntou sobre presentinhos:</p>
+      <p>
+        roupas <strong>tamanho 3 anos</strong>, sapatinhos <strong>nº 21</strong>
+        e brinquedos serão muito bem-vindos.
+      </p>
+
+      <p class="closing-message">
+        Esperamos vocês para mergulhar nessa festa com a gente! 🫧🐚
+      </p>
+
+      <div class="inline-links">
+        <a
+          href="https://maps.app.goo.gl/ujSrrrBSLkHcSrzF8?g_st=iw"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          📍 Casa de Festas Nosso Jardim
+        </a>
+
+        <a
+          href="https://wa.me/5521996621302?text=Ol%C3%A1%21%20Gostaria%20de%20confirmar%20minha%20presen%C3%A7a%20no%20anivers%C3%A1rio%20de%202%20anos%20da%20Maria%20Eduarda%20no%20dia%2008%2F11%2F2026."
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          💬 WhatsApp: (21) 99662-1302
+        </a>
+      </div>
+    </section>
+
+    <!-- No desktop aparece no fluxo; no mobile fica sempre visível na parte inferior -->
+    <nav class="quick-actions" aria-label="Ações rápidas do convite">
       <a
         class="action-button"
         href="https://wa.me/5521996621302?text=Ol%C3%A1%21%20Gostaria%20de%20confirmar%20minha%20presen%C3%A7a%20no%20anivers%C3%A1rio%20de%202%20anos%20da%20Maria%20Eduarda%20no%20dia%2008%2F11%2F2026."
@@ -62,7 +95,7 @@
         Confirmar presença
       </a>
       <a
-        class="action-button"
+        class="action-button secondary"
         href="https://maps.app.goo.gl/ujSrrrBSLkHcSrzF8?g_st=iw"
         target="_blank"
         rel="noopener noreferrer"
