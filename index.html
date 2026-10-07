@@ -44,15 +44,102 @@
         title="Confirmar presença pelo WhatsApp"
       ></a>
 
-      <!-- Bolhas decorativas animadas -->
-      <div class="bubbles" aria-hidden="true">
-        <span style="--x:8%;--s:14px;--d:8s;--delay:-1s"></span>
-        <span style="--x:18%;--s:8px;--d:10s;--delay:-5s"></span>
-        <span style="--x:33%;--s:12px;--d:9s;--delay:-3s"></span>
-        <span style="--x:51%;--s:7px;--d:11s;--delay:-7s"></span>
-        <span style="--x:68%;--s:10px;--d:8.5s;--delay:-4s"></span>
-        <span style="--x:82%;--s:15px;--d:12s;--delay:-9s"></span>
-        <span style="--x:92%;--s:9px;--d:9.5s;--delay:-6s"></span>
+      <!-- Camada de efeitos submarinos animados -->
+      <div class="ocean-effects" aria-hidden="true">
+        <div class="light-rays"></div>
+        <div class="water-glow"></div>
+
+        <div class="bubbles">
+          <span style="--x:6%;--s:12px;--d:8s;--delay:-1s"></span>
+          <span style="--x:14%;--s:7px;--d:10s;--delay:-5s"></span>
+          <span style="--x:24%;--s:10px;--d:9s;--delay:-3s"></span>
+          <span style="--x:36%;--s:6px;--d:11s;--delay:-7s"></span>
+          <span style="--x:49%;--s:9px;--d:8.5s;--delay:-4s"></span>
+          <span style="--x:61%;--s:13px;--d:12s;--delay:-9s"></span>
+          <span style="--x:74%;--s:8px;--d:9.5s;--delay:-6s"></span>
+          <span style="--x:86%;--s:11px;--d:10.5s;--delay:-8s"></span>
+          <span style="--x:94%;--s:6px;--d:7.8s;--delay:-2s"></span>
+        </div>
+
+        <div class="swimmer fish fish-a">
+          <svg viewBox="0 0 120 70" role="img">
+            <defs>
+              <linearGradient id="fishGradA" x1="0" x2="1">
+                <stop offset="0" stop-color="#ffb58e"/>
+                <stop offset="1" stop-color="#ef78a9"/>
+              </linearGradient>
+            </defs>
+            <ellipse cx="58" cy="35" rx="34" ry="20" fill="url(#fishGradA)"/>
+            <polygon points="25,35 4,17 4,53" fill="#f49a8f"/>
+            <circle cx="73" cy="30" r="3.2" fill="#5d4b73"/>
+            <path d="M77 39 Q83 43 88 39" stroke="#5d4b73" stroke-width="2" fill="none" stroke-linecap="round"/>
+            <path d="M46 18 Q58 5 67 19" fill="#f6c56e" opacity=".9"/>
+          </svg>
+        </div>
+
+        <div class="swimmer fish fish-b">
+          <svg viewBox="0 0 120 70" role="img">
+            <defs>
+              <linearGradient id="fishGradB" x1="0" x2="1">
+                <stop offset="0" stop-color="#6dd0db"/>
+                <stop offset="1" stop-color="#778fdc"/>
+              </linearGradient>
+            </defs>
+            <ellipse cx="58" cy="35" rx="34" ry="20" fill="url(#fishGradB)"/>
+            <polygon points="25,35 4,17 4,53" fill="#7cc8cf"/>
+            <circle cx="73" cy="30" r="3.2" fill="#4d5278"/>
+            <path d="M77 39 Q83 43 88 39" stroke="#4d5278" stroke-width="2" fill="none" stroke-linecap="round"/>
+            <path d="M46 18 Q58 5 67 19" fill="#f7d36e" opacity=".9"/>
+          </svg>
+        </div>
+
+        <div class="swimmer fish fish-c">
+          <svg viewBox="0 0 120 70" role="img">
+            <ellipse cx="58" cy="35" rx="33" ry="19" fill="#f6d469"/>
+            <polygon points="25,35 5,19 5,51" fill="#efa2a7"/>
+            <path d="M40 20 L47 51 M57 17 L64 53" stroke="#85cfd2" stroke-width="7" opacity=".85"/>
+            <circle cx="74" cy="30" r="3.2" fill="#5b4b68"/>
+            <path d="M77 39 Q83 43 88 39" stroke="#5b4b68" stroke-width="2" fill="none" stroke-linecap="round"/>
+          </svg>
+        </div>
+
+        <div class="creature jelly">
+          <svg viewBox="0 0 110 140" role="img">
+            <defs>
+              <linearGradient id="jellyGrad" x1="0" x2="1">
+                <stop offset="0" stop-color="#f39bc7"/>
+                <stop offset="1" stop-color="#aa8adf"/>
+              </linearGradient>
+            </defs>
+            <path d="M18 55 C18 20 92 20 92 55 L92 67 L18 67 Z" fill="url(#jellyGrad)" opacity=".9"/>
+            <circle cx="43" cy="49" r="3" fill="#5b4b68"/>
+            <circle cx="67" cy="49" r="3" fill="#5b4b68"/>
+            <path d="M47 58 Q55 65 63 58" stroke="#5b4b68" stroke-width="2" fill="none" stroke-linecap="round"/>
+            <path d="M28 67 C24 87 36 98 30 118" stroke="#d188c6" stroke-width="6" fill="none" stroke-linecap="round"/>
+            <path d="M45 67 C40 88 53 100 47 126" stroke="#b995dc" stroke-width="6" fill="none" stroke-linecap="round"/>
+            <path d="M63 67 C70 88 57 100 64 129" stroke="#ef95bb" stroke-width="6" fill="none" stroke-linecap="round"/>
+            <path d="M80 67 C86 88 74 99 81 116" stroke="#a8a0e8" stroke-width="6" fill="none" stroke-linecap="round"/>
+          </svg>
+        </div>
+
+        <div class="creature turtle-mini">
+          <svg viewBox="0 0 140 90" role="img">
+            <ellipse cx="70" cy="46" rx="38" ry="28" fill="#7fcbb2"/>
+            <ellipse cx="70" cy="46" rx="27" ry="20" fill="#8ed7bb"/>
+            <circle cx="111" cy="43" r="15" fill="#83d1bd"/>
+            <circle cx="116" cy="39" r="2.8" fill="#4c6173"/>
+            <path d="M117 49 Q122 53 126 49" stroke="#4c6173" stroke-width="2" fill="none" stroke-linecap="round"/>
+            <ellipse cx="44" cy="22" rx="14" ry="8" fill="#7fcbb2" transform="rotate(-35 44 22)"/>
+            <ellipse cx="44" cy="70" rx="14" ry="8" fill="#7fcbb2" transform="rotate(35 44 70)"/>
+            <ellipse cx="84" cy="18" rx="14" ry="8" fill="#7fcbb2" transform="rotate(30 84 18)"/>
+            <ellipse cx="84" cy="73" rx="14" ry="8" fill="#7fcbb2" transform="rotate(-30 84 73)"/>
+          </svg>
+        </div>
+
+        <div class="sparkle sparkle-1">✦</div>
+        <div class="sparkle sparkle-2">✧</div>
+        <div class="sparkle sparkle-3">✦</div>
+        <div class="sparkle sparkle-4">✧</div>
       </div>
     </section>
 
@@ -62,6 +149,15 @@
         roupas <strong>tamanho 3 anos</strong>, sapatinhos <strong>nº 21</strong>
         e brinquedos serão muito bem-vindos.
       </p>
+
+
+      <div class="water-notice" role="note">
+        <span class="water-notice-icon" aria-hidden="true">💦</span>
+        <div>
+          <strong>Aviso aos pais:</strong>
+          tragam traje de banho para as crianças, pois teremos brincadeiras com água.
+        </div>
+      </div>
 
       <p class="closing-message">
         Esperamos vocês para mergulhar nessa festa com a gente! 🫧🐚

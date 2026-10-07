@@ -1,13 +1,17 @@
 # Site — Maria Eduarda 2 anos
 
-Versão otimizada para GitHub Pages.
+Versão com animações submarinas ampliadas, mantendo o site leve e pronto para GitHub Pages.
 
-## Alterações
-- Removidos os links textuais duplicados de Casa de Festas e WhatsApp na área de informações.
-- Mantidos os botões fixos de Confirmar presença e Localização no mobile.
-- Mantidas as áreas clicáveis dentro da própria arte.
-- Arte convertida para WebP para reduzir o tamanho do arquivo e acelerar o carregamento no celular.
-- Menos bolhas animadas no mobile para reduzir processamento.
+## Novidades
+- Peixinhos atravessando a tela em velocidades diferentes.
+- Água-viva flutuando.
+- Tartaruguinha com movimento suave.
+- Bolhas em diferentes tamanhos e ritmos.
+- Raios de luz e brilho d'água.
+- Pequenos brilhos/estrelinhas.
+- Aviso aos pais para levarem traje de banho para as crianças, pois haverá brincadeiras com água.
+- Botões de Confirmar presença e Localização permanecem fixos no mobile.
+- A arte principal continua em WebP para carregamento rápido.
 
 ## Publicação
 Substitua os arquivos atuais do repositório por estes e faça commit/push.
