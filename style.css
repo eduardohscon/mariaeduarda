@@ -147,22 +147,6 @@ body {
   color: #69509a;
 }
 
-.inline-links {
-  margin-top: 18px;
-  display: grid;
-  gap: 10px;
-}
-
-.inline-links a {
-  display: block;
-  padding: 12px 14px;
-  border-radius: 16px;
-  background: linear-gradient(135deg, rgba(223,247,251,.9), rgba(249,227,241,.9));
-  color: #5b3f8b;
-  font-weight: 800;
-  text-decoration: none;
-  border: 1px solid rgba(118,80,168,.12);
-}
 
 .quick-actions {
   width: min(100%, 620px);
@@ -265,5 +249,11 @@ body {
 
   .action-button {
     transition: none;
+  }
+}
+
+@media (max-width: 520px) {
+  .bubbles span:nth-child(n+5) {
+    display: none;
   }
 }
